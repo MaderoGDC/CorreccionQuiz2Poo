@@ -39,7 +39,7 @@ public class Distribution extends Eslabon{
             p.getDatos().get(1).setFechas(fecha_s);
             r.AgrPm(p);
             }
-        productos.clear();
+        //productos.clear();
     }
 
     public ArrayList<ProductoM> getProductos() {

@@ -30,7 +30,7 @@ import java.util.Date;
             p.datos.get(0).setEslabonS(m);
             p.datos.get(0).setFechas(fecha_s);
         }
-        productosC.clear();
+        //productosC.clear();
     }
 
     public ArrayList<Producto> getProductosC() {

@@ -37,7 +37,7 @@ public class Manufacturer extends Eslabon {
             p.datos.get(0).setFechas(fecha_s);
             d.AgrPm(p);
         }
-        productosM.clear();
+        //productosM.clear();
     }
     public void AgrMp(Producto pc){
         this.Mp.add(pc);

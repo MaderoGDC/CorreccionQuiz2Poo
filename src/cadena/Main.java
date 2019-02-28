@@ -73,8 +73,8 @@ public class Main {
                         String years = lectura.nextLine();
                         int yearsa = Integer.parseInt(year);
                         LocalDate date1s = LocalDate.of(yearsa, mss, day1s);
-                        y.enviar(w, date1s);
                         y.getProductosC().get(0).traza();
+                        y.enviar(w, date1s);                        
                         System.out.println("ahora la otra materia prima");
                             name = "leche";
                             System.out.println("Ingrese la fecha de elaboracion en la granja: ");
@@ -88,6 +88,7 @@ public class Main {
                             String year2 = lectura.nextLine();
                             int year22 = Integer.parseInt(year);
                             LocalDate date2 = LocalDate.of(year22, ms22, day22);
+                            System.out.println("se registro la " + name +  " con exito");
                             x.registrar(name, date2);
                             System.out.println("digite la fecha de salida de la granja: ");
                             System.out.println("Dia: ");
@@ -101,6 +102,7 @@ public class Main {
                             int yearsao = Integer.parseInt(year);
                             LocalDate date1so = LocalDate.of(yearsao, msso, day1so);
                             x.getProductosC().get(0).traza();
+                            x.enviar(w, date1so);
                     }else if (name1 == 2) {
                         x.registrar(name, date1);
                         System.out.println("se registro la " + name +  " con exito");
@@ -115,8 +117,8 @@ public class Main {
                         String years = lectura.nextLine();
                         int yearsa = Integer.parseInt(year);
                         LocalDate date1s = LocalDate.of(yearsa, mss, day1s);
-                        x.enviar(w, date1s);
                         x.getProductosC().get(0).traza();
+                        x.enviar(w, date1s);                        
                         System.out.println("ahora la otra materia prima");
                             name = "harina";
                             System.out.println("Ingrese la fecha de elaboracion en la granja: ");
@@ -130,7 +132,8 @@ public class Main {
                             String year2 = lectura.nextLine();
                             int year22 = Integer.parseInt(year);
                             LocalDate date2 = LocalDate.of(year22, ms22, day22);
-                            x.registrar(name, date2);
+                            System.out.println("se registro la " + name +  " con exito");
+                            y.registrar(name, date2);
                             System.out.println("digite la fecha de salida de la granja: ");
                             System.out.println("Dia: ");
                             String dayso = lectura.nextLine();
@@ -142,7 +145,8 @@ public class Main {
                             String yearso = lectura.nextLine();
                             int yearsao = Integer.parseInt(year);
                             LocalDate date1so = LocalDate.of(yearsao, msso, day1so);
-                            x.getProductosC().get(0).traza();                                            
+                            y.getProductosC().get(0).traza();
+                            x.enviar(w, date1so);
                     } else {
                         System.out.println("ocurrio un error en la seleccion de granja");
                     }

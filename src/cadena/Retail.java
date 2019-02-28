@@ -34,7 +34,7 @@ public class Retail extends Eslabon {
             p.setCod(cod);
             p.setPrecio(precio);
         }
-        productos.clear();
+        //productos.clear();
     }
     public boolean vender(Client client, LocalDate f_venta){
         this.productos.get(this.productos.size()-1).getDatos().get(2).setFechas(f_venta);
