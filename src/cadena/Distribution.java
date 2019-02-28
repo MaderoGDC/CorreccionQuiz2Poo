@@ -19,6 +19,7 @@ public class Distribution extends Eslabon{
     
     public Distribution(String nombre, String descripcion, String direccion) {
         super(nombre, descripcion, direccion);
+        this.productos = new ArrayList<>();
         
     }
 
@@ -40,4 +41,14 @@ public class Distribution extends Eslabon{
             }
         productos.clear();
     }
+
+    public ArrayList<ProductoM> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(ArrayList<ProductoM> productos) {
+        this.productos = productos;
+    }
+    
+
 }

@@ -17,11 +17,12 @@ import java.util.Date;
         private ArrayList<Producto> productosC; 
         public Farmer(String nombre, String descripcion, String direccion) {
             super(nombre, descripcion, direccion);
+            this.productosC = new ArrayList<>();
         }
     
     public void registrar(String nombre, LocalDate fechae){
         ProductoC p =  new ProductoC(nombre,fechae,this);
-        this.productosC.add(p);
+        this.productosC.add(p);      
     }    
     public void enviar (Manufacturer m, LocalDate fecha_s){
         for (Producto p : productosC) {
@@ -31,4 +32,14 @@ import java.util.Date;
         }
         productosC.clear();
     }
+
+    public ArrayList<Producto> getProductosC() {
+        return productosC;
+    }
+
+    public void setProductosC(ArrayList<Producto> productosC) {
+        this.productosC = productosC;
+    }
+
+
 }

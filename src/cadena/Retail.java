@@ -21,6 +21,7 @@ public class Retail extends Eslabon {
     
     public Retail(String nombre, String descripcion, String direccion) {
         super(nombre, descripcion, direccion);
+        this.productos = new ArrayList<>();
     }
     
     public void AgrPm(ProductoM pc){
@@ -41,4 +42,13 @@ public class Retail extends Eslabon {
         this.productos.remove(this.productos.size()-1);           
            return true;     
     }
+
+    public ArrayList<ProductoM> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(ArrayList<ProductoM> productos) {
+        this.productos = productos;
+    }
+    
 }

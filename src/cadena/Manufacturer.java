@@ -20,6 +20,8 @@ public class Manufacturer extends Eslabon {
     
     public Manufacturer(String nombre, String descripcion, String direccion) {
         super(nombre, descripcion, direccion);
+        this.productosM = new ArrayList<>();
+        this.Mp = new ArrayList<>();
     }
     
     public void registrar(ArrayList<ProductoC> Mp, LocalDate fecha_e,String nombre,int lote){
@@ -69,6 +71,22 @@ public class Manufacturer extends Eslabon {
     @Override
     public void setDireccion(String direccion) {
         this.direccion = direccion;
+    }
+
+    public ArrayList<Producto> getMp() {
+        return Mp;
+    }
+
+    public void setMp(ArrayList<Producto> Mp) {
+        this.Mp = Mp;
+    }
+
+    public ArrayList<ProductoM> getProductosM() {
+        return productosM;
+    }
+
+    public void setProductosM(ArrayList<ProductoM> productosM) {
+        this.productosM = productosM;
     }
     
 }

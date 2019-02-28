@@ -23,7 +23,7 @@ public class Main {
 
         Scanner lectura = new Scanner(System.in);
         int a = 0;
-        String n = "BaseDatos.txt";
+        String n = ".txt";
         do {
             System.out.println("Digite una opcion: ");
             System.out.println("1.Generar un producto(cadena de suministro)");
@@ -39,6 +39,7 @@ public class Main {
                     System.out.println("    1.harina");
                     System.out.println("    2.leche");
                     String name = lectura.nextLine();
+                    int name1 = Integer.parseInt(name);
                     if (name.equals("1")) {
                         name = "harina";
                     } else if (name.equals("2")) {
@@ -46,9 +47,8 @@ public class Main {
                     } else {
                         System.out.println("opcion invalida");
                         break;
-                    }
-                    int name1 = Integer.parseInt(name);
-                    System.out.println("Ingrese la fecha de elaboracion o cultivo: ");
+                    }                    
+                    System.out.println("Ingrese la fecha de elaboracion en la granja: ");
                     System.out.println("Dia: ");
                     String day = lectura.nextLine();
                     int day1 = Integer.parseInt(day);
@@ -59,8 +59,96 @@ public class Main {
                     String year = lectura.nextLine();
                     int year1 = Integer.parseInt(year);
                     LocalDate date1 = LocalDate.of(year1, ms, day1);
+                    if (name1 == 1) {
+                        y.registrar(name, date1);
+                        System.out.println("se registro la " + name +  " con exito");
+                        System.out.println("digite la fecha de salida de la granja: ");
+                        System.out.println("Dia: ");
+                        String days = lectura.nextLine();
+                        int day1s = Integer.parseInt(day);
+                        System.out.println("Mes: ");
+                        String mss1 = lectura.nextLine();
+                        int mss = Integer.parseInt(ms1);
+                        System.out.println("Anio: ");
+                        String years = lectura.nextLine();
+                        int yearsa = Integer.parseInt(year);
+                        LocalDate date1s = LocalDate.of(yearsa, mss, day1s);
+                        y.enviar(w, date1s);
+                        y.getProductosC().get(0).traza();
+                        System.out.println("ahora la otra materia prima");
+                            name = "leche";
+                            System.out.println("Ingrese la fecha de elaboracion en la granja: ");
+                            System.out.println("Dia: ");
+                            String day2 = lectura.nextLine();
+                            int day22 = Integer.parseInt(day);
+                            System.out.println("Mes: ");
+                            String ms2 = lectura.nextLine();
+                            int ms22 = Integer.parseInt(ms1);
+                            System.out.println("Anio: ");
+                            String year2 = lectura.nextLine();
+                            int year22 = Integer.parseInt(year);
+                            LocalDate date2 = LocalDate.of(year22, ms22, day22);
+                            x.registrar(name, date2);
+                            System.out.println("digite la fecha de salida de la granja: ");
+                            System.out.println("Dia: ");
+                            String dayso = lectura.nextLine();
+                            int day1so = Integer.parseInt(day);
+                            System.out.println("Mes: ");
+                            String mss1o = lectura.nextLine();
+                            int msso = Integer.parseInt(ms1);
+                            System.out.println("Anio: ");
+                            String yearso = lectura.nextLine();
+                            int yearsao = Integer.parseInt(year);
+                            LocalDate date1so = LocalDate.of(yearsao, msso, day1so);
+                            x.getProductosC().get(0).traza();
+                    }else if (name1 == 2) {
+                        x.registrar(name, date1);
+                        System.out.println("se registro la " + name +  " con exito");
+                        System.out.println("digite la fecha de salida de la granja: ");
+                        System.out.println("Dia: ");
+                        String days = lectura.nextLine();
+                        int day1s = Integer.parseInt(day);
+                        System.out.println("Mes: ");
+                        String mss1 = lectura.nextLine();
+                        int mss = Integer.parseInt(ms1);
+                        System.out.println("Anio: ");
+                        String years = lectura.nextLine();
+                        int yearsa = Integer.parseInt(year);
+                        LocalDate date1s = LocalDate.of(yearsa, mss, day1s);
+                        x.enviar(w, date1s);
+                        x.getProductosC().get(0).traza();
+                        System.out.println("ahora la otra materia prima");
+                            name = "harina";
+                            System.out.println("Ingrese la fecha de elaboracion en la granja: ");
+                            System.out.println("Dia: ");
+                            String day2 = lectura.nextLine();
+                            int day22 = Integer.parseInt(day);
+                            System.out.println("Mes: ");
+                            String ms2 = lectura.nextLine();
+                            int ms22 = Integer.parseInt(ms1);
+                            System.out.println("Anio: ");
+                            String year2 = lectura.nextLine();
+                            int year22 = Integer.parseInt(year);
+                            LocalDate date2 = LocalDate.of(year22, ms22, day22);
+                            x.registrar(name, date2);
+                            System.out.println("digite la fecha de salida de la granja: ");
+                            System.out.println("Dia: ");
+                            String dayso = lectura.nextLine();
+                            int day1so = Integer.parseInt(day);
+                            System.out.println("Mes: ");
+                            String mss1o = lectura.nextLine();
+                            int msso = Integer.parseInt(ms1);
+                            System.out.println("Anio: ");
+                            String yearso = lectura.nextLine();
+                            int yearsao = Integer.parseInt(year);
+                            LocalDate date1so = LocalDate.of(yearsao, msso, day1so);
+                            x.getProductosC().get(0).traza();                                            
+                    } else {
+                        System.out.println("ocurrio un error en la seleccion de granja");
+                    }
                     break;
                 case 2:
+                    System.out.println("dd");
                     break;
                 case 3:
                     System.out.println("Gracias, Hasta pronto");

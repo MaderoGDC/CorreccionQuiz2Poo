@@ -26,4 +26,21 @@ public class Client {
     public void comprar(Retail r, LocalDate F){
         r.vender(this,F);
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public ArrayList<ProductoM> getMisCompritas() {
+        return misCompritas;
+    }
+
+    public void setMisCompritas(ArrayList<ProductoM> misCompritas) {
+        this.misCompritas = misCompritas;
+    }
+
 }
