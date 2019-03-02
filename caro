@@ -1,0 +1,22 @@
+Materias_primas_utilizadas_en_el_producto:
+2
+Nombre Producto: leche
+Lugar llegada:  Granja_X Fecha Llegada: 2000-01-01
+Lugar destino: Manufacturera_W Fecha Salida: 2000-01-01
+Nombre Producto: harina
+Lugar llegada:  Granja_Y Fecha Llegada: 2000-02-02
+Lugar destino: Manufacturera_W Fecha Salida: 2000-02-02
+Lote: 
+3
+Codigo: 
+123
+Precio: 
+100.0
+Nombre_Producto: 
+pan
+Lugar llegada:  Manufacturera_W Fecha Llegada: 2000-02-03
+Lugar destino: Distribucion_D Fecha Salida: 2000-02-02
+Lugar llegada:  Distribucion_D Fecha Llegada: 2000-02-02
+Lugar destino: Comercializadora_R Fecha Salida: 2000-02-04
+Lugar llegada:  Comercializadora_R Fecha Llegada: 2000-02-04
+Lugar destino:   Fecha Salida: 2019-03-01

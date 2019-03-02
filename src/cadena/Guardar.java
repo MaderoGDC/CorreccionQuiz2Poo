@@ -27,7 +27,7 @@ public class Guardar {
 
     public String trazaM(ProductoM p) {
         String s = "";
-        s = s + "Nombre Producto: " + p.nombre + "\n";
+        s = s + "Nombre_Producto: " + "\n" + p.nombre + "\n";
         for (int i = 0; i < p.datos.size(); i++) {
             if (p.datos.get(i).getEslabonS() == null) {
                 Retail e = new Retail(" ", " ", " ");
@@ -65,17 +65,14 @@ public class Guardar {
 
     public String guardar(ProductoM p) {
         String s = "";
-        s = s + "Materias primas utilizadas en el producto: " + "\n";
+        s = s + "Materias_primas_utilizadas_en_el_producto:" + "\n";
         s = s + (p.getMp().size()) + "\n";
         for (int i = 0; i < p.getMp().size(); i++) {
             s = s + trazaC(p.getMp().get(i));
         }
-        s = s + "Materias primas utilizadas en el producto: " + "\n";
-
-        s += "producto pan";
-        s += "Lote: " + p.getLote() + "\n";
-        s += "Codigo: " + p.getCod() + "\n";
-        s += "Precio" + p.getPrecio() + "\n";
+        s += "Lote: " + "\n" +p.getLote() + "\n";
+        s += "Codigo: " +"\n" + p.getCod() + "\n";
+        s += "Precio: " +"\n" + p.getPrecio() + "\n";
         s = s + trazaM(p);
 
         return s;

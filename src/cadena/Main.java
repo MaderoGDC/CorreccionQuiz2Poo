@@ -160,11 +160,11 @@ public class Main {
                         System.out.println(w.getProductosM().size());
                         w.getProductosM().get(0).factura();
                     } catch (Exception e) {
-                        System.out.println("ocurrio un error en el ocesod e manufactura");
+                        System.out.println("ocurrio un error en el proceso de manufactura");
                         System.out.println(e);
                     }
                     System.out.println("El producto ha sido enviado a la" + d.getNombre());
-                    //distrinucin del producto
+                    //distrinucion del producto
                     try {
                         System.out.println("Ingrese le fecha de distribucion");
                         System.out.println("Dia: ");
@@ -227,20 +227,3 @@ public class Main {
         } while (!salir);
     }
 }
-//GestionArchivo g = new GestionArchivo(n);
-
-//        LocalDate n = LocalDate.of(2019, 2, 27);
-//        System.out.println(n);
-//        System.out.println(n.getDayOfMonth());
-//        int o = n.getDayOfMonth();
-//        Integer p = n.getMonthValue();
-//        System.out.println("dia: "+ o);
-//        System.out.println("mes: "+ p);
-//        Farmer farmer = new Farmer("McDonald","El viejo tenia una granja", "iaiaoh");
-//        Dato dato = new Dato(LocalDate.of(1900, 2,1 ), farmer);
-//        System.out.println("dato: "+ dato.getFechae());
-//        LocalDate hoy = LocalDate.now();
-//        System.out.println("hoy:" + hoy);
-//    }
-//    
-//}
