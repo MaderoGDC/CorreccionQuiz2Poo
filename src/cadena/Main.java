@@ -16,11 +16,11 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        Farmer x = new Farmer("Granja_X", "produce_leche", "ViaCota-km2");
-        Farmer y = new Farmer("Granja_Y", "produce_harina", "ViaSubachoche-km7");
-        Manufacturer w = new Manufacturer("Manufacturera_W", "manufactura_pan", "PuentePiedra");
-        Distribution d = new Distribution("Distribucion_D", "Centro_de_distribucion", "Subachoque");
-        Retail r = new Retail("Comercializadora_R", "comercializadora_de_pan", "Cortijo");
+        Farmer x = new Farmer("Granja_X", "produce_leche", "lat:21_long:_23");
+        Farmer y = new Farmer("Granja_Y", "produce_harina", "lat:56_long:12");
+        Manufacturer w = new Manufacturer("Manufacturera_W", "manufactura_pan", "lat:89_long: 21");
+        Distribution d = new Distribution("Distribucion_D", "Centro_de_distribucion", "lat:12_long:23");
+        Retail r = new Retail("Comercializadora_R", "comercializadora_de_pan", "lat:21_long:23");
 
         Scanner lectura = new Scanner(System.in);
         boolean salir = false;

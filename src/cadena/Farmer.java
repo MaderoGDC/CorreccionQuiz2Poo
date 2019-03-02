@@ -16,10 +16,11 @@ import java.util.Date;
     public class Farmer extends Eslabon {
         
         private ArrayList<ProductoC> productosC; 
-        public Farmer(String nombre, String descripcion, String direccion) {
+        
+    public Farmer(String nombre, String descripcion, String direccion) {
             super(nombre, descripcion, direccion);
             this.productosC = new ArrayList<>();
-        }
+    }
     
     public void registrar(String nombre, LocalDate fechae){
         ProductoC p =  new ProductoC(nombre,fechae,this);
