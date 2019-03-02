@@ -34,9 +34,16 @@ public class ProductoM extends Producto{
     }
     public void factura(){
         System.out.println("Materias primas utilizadas en el producto: ");
-        for(ProductoC pc : Mp) {
-            pc.traza();
-        }
+        System.out.println(this.Mp.size());
+        for (int i = 0; i < this.Mp.size(); i++) {
+            
+            this.Mp.get(i).traza();           
+        }        System.out.println("Materias primas utilizadas en el producto: ");
+
+        System.out.println("producto pan");
+        System.out.println("Lote: "+ this.Lote);
+        System.out.println("Codigo: "+ this.cod);
+        System.out.println("Precio" + this.precio);
         this.traza();
     }
     @Override

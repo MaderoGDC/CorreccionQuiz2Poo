@@ -25,7 +25,12 @@ public abstract class Producto {
     public void traza(){
         System.out.println("Nombre Producto: "+ this.nombre);
         for (int i = 0; i < datos.size(); i++) {
-            System.out.println("Lugar llegada"+ datos.get(i).getEslabonE().getNombre()
+            if(    datos.get(i).getEslabonS() == null ){
+                 Retail e = new Retail(" ", " ", " ");
+                 datos.get(i).setEslabonS(e);
+                       
+            }
+            System.out.println("Lugar llegada:  "+ datos.get(i).getEslabonE().getNombre()
             + " Fecha Llegada: " + datos.get(i).getFechae()
             );
             System.out.println("Lugar destino: "+ datos.get(i).getEslabonS().nombre

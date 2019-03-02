@@ -32,7 +32,8 @@ public class Distribution extends Eslabon{
     }
     public void distribuir( Retail r, LocalDate fecha_s){
          for (ProductoM p : productos) {
-            Dato d1 = new Dato(fecha_s, r); 
+            Dato d1 = new Dato(fecha_s, r);
+            p.datos.add(d1);
             p.datos.get(1).setEslabonE(p.datos.get(0).getEslabonS());
             p.datos.get(1).setFechae(p.datos.get(0).getFechas());
             p.getDatos().get(1).setEslabonS(r);

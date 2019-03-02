@@ -14,7 +14,8 @@ import java.util.Date;
  * @author CARITO
  */
     public class Farmer extends Eslabon {
-        private ArrayList<Producto> productosC; 
+        
+        private ArrayList<ProductoC> productosC; 
         public Farmer(String nombre, String descripcion, String direccion) {
             super(nombre, descripcion, direccion);
             this.productosC = new ArrayList<>();
@@ -25,7 +26,7 @@ import java.util.Date;
         this.productosC.add(p);      
     }    
     public void enviar (Manufacturer m, LocalDate fecha_s){
-        for (Producto p : productosC) {
+        for (ProductoC p : productosC) {
             m.AgrMp(p);
             p.datos.get(0).setEslabonS(m);
             p.datos.get(0).setFechas(fecha_s);
@@ -33,11 +34,11 @@ import java.util.Date;
         //productosC.clear();
     }
 
-    public ArrayList<Producto> getProductosC() {
+    public ArrayList<ProductoC> getProductosC() {
         return productosC;
     }
 
-    public void setProductosC(ArrayList<Producto> productosC) {
+    public void setProductosC(ArrayList<ProductoC> productosC) {
         this.productosC = productosC;
     }
 

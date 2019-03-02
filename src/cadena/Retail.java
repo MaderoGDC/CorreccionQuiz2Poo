@@ -29,8 +29,8 @@ public class Retail extends Eslabon {
     }
     public void etiquetar(int cod, Double precio){
          for (ProductoM p : productos) {
-            p.datos.get(2).setEslabonE(p.datos.get(1).getEslabonS());
-            p.datos.get(2).setFechae(p.datos.get(1).getFechas());
+            Dato d = new Dato(p.datos.get(1).getFechas(),p.datos.get(1).getEslabonS());
+            p.datos.add(d);
             p.setCod(cod);
             p.setPrecio(precio);
         }
@@ -38,8 +38,8 @@ public class Retail extends Eslabon {
     }
     public boolean vender(Client client, LocalDate f_venta){
         this.productos.get(this.productos.size()-1).getDatos().get(2).setFechas(f_venta);
-        client.AgrCom(this.productos.get(productos.size()-1));       
-        this.productos.remove(this.productos.size()-1);           
+        client.AgrCom(this.productos.get(productos.size()-1));
+        client.getMisCompritas().get(client.getMisCompritas().size()-1).getDatos().get(2).setEslabonS(null);        
            return true;     
     }
 

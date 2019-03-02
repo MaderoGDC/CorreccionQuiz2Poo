@@ -15,7 +15,7 @@ import java.util.Scanner;
  * @author CARITO
  */
 public class Manufacturer extends Eslabon {
-    private ArrayList<Producto> Mp      ;
+    private ArrayList<ProductoC> Mp      ;
     private ArrayList<ProductoM> productosM; 
     
     public Manufacturer(String nombre, String descripcion, String direccion) {
@@ -24,11 +24,11 @@ public class Manufacturer extends Eslabon {
         this.Mp = new ArrayList<>();
     }
     
-    public void registrar(ArrayList<ProductoC> Mp, LocalDate fecha_e,String nombre,int lote){
-        ProductoM pm = new ProductoM(Mp,lote, nombre, fecha_e, this);
-        pm.datos.add(new Dato(fecha_e, this));
+    public void registrar(LocalDate fecha_e,String nombre,int lote){
+        
+        ProductoM pm = new ProductoM(this.Mp,lote, nombre, fecha_e, this);
         this.productosM.add(pm);
-        this.Mp.clear();
+        
 
     }
     public void enviar (Distribution d, LocalDate fecha_s){
@@ -39,7 +39,7 @@ public class Manufacturer extends Eslabon {
         }
         //productosM.clear();
     }
-    public void AgrMp(Producto pc){
+    public void AgrMp(ProductoC pc){
         this.Mp.add(pc);
     }
     
@@ -73,11 +73,11 @@ public class Manufacturer extends Eslabon {
         this.direccion = direccion;
     }
 
-    public ArrayList<Producto> getMp() {
+    public ArrayList<ProductoC> getMp() {
         return Mp;
     }
 
-    public void setMp(ArrayList<Producto> Mp) {
+    public void setMp(ArrayList<ProductoC> Mp) {
         this.Mp = Mp;
     }
 
