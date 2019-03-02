@@ -88,6 +88,8 @@ public class Guardar {
             s+=guardar(p); 
         }        
         salida.print(s);
+        salida.flush();
+        salida.close();
         return true;
     }
 
