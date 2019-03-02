@@ -34,11 +34,11 @@ public class Guardar {
                 p.datos.get(i).setEslabonS(e);
 
             }
-            s = s + "Lugar llegada:  " + p.datos.get(i).getEslabonE().getNombre()
-                    + " Fecha Llegada: " + p.datos.get(i).getFechae()
+            s = s + "Lugar_llegada:  " + p.datos.get(i).getEslabonE().getNombre()
+                    + " Fecha_Llegada: " + p.datos.get(i).getFechae()
                     + "\n";
-            s = s + "Lugar destino: " + p.datos.get(i).getEslabonS().nombre
-                    + " Fecha Salida: " + p.datos.get(i).getFechas() + "\n";
+            s = s + "Lugar_destino: " + p.datos.get(i).getEslabonS().nombre
+                    + " Fecha_Salida: " + p.datos.get(i).getFechas() + "\n";
 
         }
         return s;
@@ -46,18 +46,18 @@ public class Guardar {
 
     public String trazaC(ProductoC p) {
         String s = "";
-        s = s + "Nombre Producto: " + p.nombre + "\n";
+        s = s + "Nombre_Producto: " + p.nombre + "\n";
         for (int i = 0; i < p.datos.size(); i++) {
             if (p.datos.get(i).getEslabonS() == null) {
                 Retail e = new Retail(" ", " ", " ");
                 p.datos.get(i).setEslabonS(e);
 
             }
-            s = s + "Lugar llegada:  " + p.datos.get(i).getEslabonE().getNombre()
-                    + " Fecha Llegada: " + p.datos.get(i).getFechae()
+            s = s + "Lugar_llegada:  " + p.datos.get(i).getEslabonE().getNombre()
+                    + " Fecha_Llegada: " + p.datos.get(i).getFechae()
                     + "\n";
-            s = s + "Lugar destino: " + p.datos.get(i).getEslabonS().nombre
-                    + " Fecha Salida: " + p.datos.get(i).getFechas() + "\n";
+            s = s + "Lugar_destino: " + p.datos.get(i).getEslabonS().nombre
+                    + " Fecha_Salida: " + p.datos.get(i).getFechas() + "\n";
 
         }
         return s;
