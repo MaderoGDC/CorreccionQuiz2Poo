@@ -1,0 +1,9 @@
+EL formato Guarda primero el numero de materias primas utilizadas para le producto, seguido de su nombre y la traza de su
+produccion, Es decir, fecha de llegada y salida, asi como el eslabon de llegada y de salida.
+seguido de la informacion particular del producto manufacturado (pan) y su traza;esta informacion 
+que no comparte con los otros productos (Materias primas)
+A pesar de heredar de la misma superClase padre Productos agrega mas atributos y sobreescribe sus metodos, conveniente
+ya que a pesar de compartir varios atributos son clases distintas.
+Hablando de heriencia y polimorfismo en esta Aplicacion es importante ya que si se crease un objeto tipo producto "a"
+al que quisieramos asignarle un valor lote, por ejemplo, primero deberiamos reasignarlo a una instancia productoC "b",
+para que accediera a los atributos y metodos de esta clase.
